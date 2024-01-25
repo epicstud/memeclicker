@@ -10,6 +10,7 @@
             position: absolute;
             width: 50px; /* Adjust the size as needed */
             height: 50px;
+            right: 10%;
             animation: floatAndFade 6s linear; /* Adjust the duration for visibility */
             pointer-events: none;
         }
