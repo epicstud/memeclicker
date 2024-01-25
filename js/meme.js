@@ -29,4 +29,4 @@
     }
 
     // Adjust the initial position of the cookie image to the left side of the screen
-    document.getElementById('cookie').style.left = '5px'; // Adjust the offset as needed
+    document.getElementById('cookie').style.left = '1px'; // Adjust the offset as needed
