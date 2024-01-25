@@ -5,9 +5,9 @@
         .meme {
             width: 50px; /* Adjust the size as needed */
             height: 50px;
-            animation: floatAndFade 5s linear; /* Adjust the duration for visibility */
+            animation: floatAndFade 6s linear; /* Adjust the duration for visibility */
             top: 100%;
-            left: 93%;
+            left: 0%;
         }
 
         @keyframes floatAndFade {
