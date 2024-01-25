@@ -5,8 +5,6 @@ body {
 
 
 .sectionLeft {
-  float: Left;
-  width: 70%;
 }
 
 .sectionRight {
@@ -31,8 +29,6 @@ body {
   -ms-user-select: none;
   ondragstart: false;
   position: relative;
-  width: 100vw;
-  height: 100vh;
  
 }
 
