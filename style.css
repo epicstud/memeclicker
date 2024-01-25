@@ -29,6 +29,7 @@ body {
   -ms-user-select: none;
   ondragstart: false;
   position: relative;
+  top: 30%;
   right: 30%;
   
  
