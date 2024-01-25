@@ -29,8 +29,8 @@ body {
   -ms-user-select: none;
   ondragstart: false;
   position: relative;
-  left: 20%;
-  top: 30%;
+  right: 40%;
+  
  
 }
 
