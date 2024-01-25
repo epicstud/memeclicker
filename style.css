@@ -29,10 +29,6 @@ body {
   -ms-user-select: none;
   ondragstart: false;
   position: relative;
-  top: 65%;
-  right: 30%;
-  
- 
 }
 
 .clickerContainer img:hover { transform: scale(1.10); }
