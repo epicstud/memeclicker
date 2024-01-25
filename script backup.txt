@@ -1,0 +1,106 @@
+var score = 0;
+var clickingPower = 1;
+var cursorCost = 15;
+var cursors = 0;
+
+var grandmaCost = 100;
+var grandmas = 0;
+
+
+// Buy Cursors
+    function buyCursor() {
+    if (score >= cursorCost) {
+      score = score - cursorCost;
+      cursors = cursors + 1;
+      cursorCost = Math.round(cursorCost * 1.15);
+
+       document.getElementById("score").innerHTML = score;
+       document.getElementById("cursorcost").innerHTML = cursorCost;
+       document.getElementById("cursors").innerHTML = cursors;
+
+      updateScorePerSecond();
+    }
+  }
+
+
+// Buy Grandmas
+  function buyGrandma() {
+  if (score >= grandmaCost) {
+    score = score - grandmaCost;
+    grandmas = grandmas + 1;
+    grandmaCost = Math.round(grandmaCost * 1.15);
+
+     document.getElementById("score").innerHTML = score;
+     document.getElementById("grandmacost").innerHTML = grandmaCost;
+     document.getElementById("grandmas").innerHTML = grandmas;
+
+      updateScorePerSecond();
+  }
+}
+
+
+
+function updateScorePerSecond() {
+  scorePerSecond = cursors + grandmas * 5;
+  document.getElementById("scorepersecond").innerHTML = scorePerSecond;
+}
+
+    function loadGame() {
+      var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+      if (typeof savedGame.score !== "undefined") score = savedGame.score;
+      if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+      if (typeof savedGame.cursorCost !== "undefined") cursorCost = savedGame.cursorCost;
+      if (typeof savedGame.cursors !== "undefined") cursors = savedGame.cursors;
+      if (typeof savedGame.grandmaCost !== "undefined") grandmaCost = savedGame.grandmaCost;
+      if (typeof savedGame.score !== "undefined") grandmas = savedGame.grandmas;
+    }
+
+function saveGame() {
+  var gameSave = {
+    score: score,
+    clickingPower: clickingPower,
+    cursorCost: cursorCost,
+    cursors: cursors,
+    grandmaCost: grandmaCost,
+    grandmas: grandmas
+  };
+  localStorage.setItem("gameSave", JSON.stringify(gameSave));
+}
+
+function resetGame() {
+  if(confirm("Are you sure you want to reset your game?")) {
+
+  }
+}
+
+window.onload = function () {
+  loadGame();
+  updateScorePerSecond();
+  document.getElementById("score").innerHTML = score;
+  document.getElementById("cursorcost").innerHTML = cursorCost;
+  document.getElementById("cursors").innerHTML = cursors;
+  document.getElementById("grandmacost").innerHTML = grandmaCost;
+  document.getElementById("grandmas").innerHTML = grandmas;
+};
+
+// I guess you leave this alone?
+function addToScore(amount) {
+  score = score + amount;
+  document.getElementById("score").innerHTML = score;
+}
+
+
+    // idk
+setInterval(function(){
+  score = score + cursors *  1;
+  score = score + grandmas * 5; // *5 is score per second
+
+
+  // Also leave this alone?
+  document.getElementById("score").innerHTML = score;
+  document.title = score + " Money - Meme";
+}, 1000);   //1000ms = 1 second
+
+setInterval (function() {
+  saveGame();
+}, 1000); // 1 seconds
