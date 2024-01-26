@@ -6,7 +6,7 @@
                         { src: 'memes/meme4.png', chance: 3 },
                         { src: 'memes/meme5.gif', chance: 50 },
                         { src: 'memes/meme6.gif', chance: 40 },
-                        { src: 'memes/meme7.png', chance: 3 },
+                        { src: 'memes/meme7.png', chance: 50 },
                         { src: 'memes/meme8.gif', chance: 50 },
                         { src: 'memes/meme9.png', chance: 40 },
                 // Add more meme data with chances as needed
