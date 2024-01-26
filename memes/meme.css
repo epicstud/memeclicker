@@ -13,7 +13,7 @@
             position: absolute;
             width: 70px; /* Adjust the size as needed */
             height: 70px;
-            animation: floatAndFade 3s linear;
+            animation: floatAndFade 8s linear;
             pointer-events: none;
             top: 70%;
         }
