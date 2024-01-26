@@ -14,7 +14,7 @@ function spawnMeme() {
             meme.classList.add('meme');
 
             // Set random position around the cookie image
-            meme.style.top = cookiePosition.top + Math.random() * 90 + 'px'; // Adjust the range as needed
+            meme.style.top = cookiePosition.top + Math.random() * 100 + 'px'; // Adjust the range as needed
             meme.style.left = cookiePosition.left + Math.random() * 30 + 'px'; // Adjust the range as needed
 
             // Append meme to the body
