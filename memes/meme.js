@@ -15,13 +15,13 @@
             const selectedMeme = getRandomMeme(memeData);
             
             // Check if the meme should be displayed based on the chance
-            if (Math.random() * 200 <= selectedMeme.chance) {
+            if (Math.random() * 100 <= selectedMeme.chance) {
                 const meme = document.createElement('img');
                 meme.src = selectedMeme.src;
                 meme.classList.add('meme');
 
                 // Use the spacing variable to control the distance between memes
-                const spacing = 100; // Adjust the spacing as needed
+                const spacing = 200; // Adjust the spacing as needed
                 meme.style.top = cookiePosition.top + Math.random() * spacing + 'px';
                 meme.style.left = cookiePosition.left + Math.random() * spacing + 'px';
 
