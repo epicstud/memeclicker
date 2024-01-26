@@ -1,7 +1,7 @@
 function spawnMeme() {
             const memeImages = [
                 'meme1.png',
-                'meme2.png',
+                'meme2.gif',
                 'meme3.png',
                 // Add more meme images as needed
             ];
