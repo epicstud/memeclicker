@@ -15,7 +15,7 @@
             height: 50px;
             animation: floatAndFade 3s linear;
             pointer-events: none;
-            top: 20%;
+            top: 50%;
         }
 
         @keyframes floatAndFade {
