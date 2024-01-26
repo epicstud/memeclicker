@@ -15,7 +15,7 @@
             const selectedMeme = getRandomMeme(memeData);
             
             // Check if the meme should be displayed based on the chance
-            if (Math.random() * 200 <= selectedMeme.chance) {
+            if (Math.random() * 100 <= selectedMeme.chance) {
                 const meme = document.createElement('img');
                 meme.src = selectedMeme.src;
                 meme.classList.add('meme');
