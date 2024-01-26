@@ -5,6 +5,7 @@ function spawnMeme() {
                 'memes/meme3.png',
                 'memes/meme4.png',
                 'memes/meme5.gif',
+                'memes/meme6.gif',
                 
                 // Add more meme images as needed
             ];
