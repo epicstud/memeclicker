@@ -17,7 +17,7 @@ function spawnMeme() {
             meme.classList.add('meme');
 
             // Use the spacing variable to control the distance between memes
-            const spacing = 100; // Adjust the spacing as needed
+            const spacing = 200; // Adjust the spacing as needed
             meme.style.top = cookiePosition.top + Math.random() * spacing + 'px';
             meme.style.left = cookiePosition.left + Math.random() * spacing + 'px';
 
