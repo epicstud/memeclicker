@@ -1,11 +1,11 @@
         function spawnMeme() {
             const memeData = [
-                        { src: 'memes/meme1.png', chance: 70 }, // 50% chance
+                        { src: 'memes/meme1.png', chance: 100 }, // 50% chance
                         { src: 'memes/meme2.gif', chance: 2 }, // 25% chance
-                        { src: 'memes/meme3.png', chance: 70 }, // 10% chance
+                        { src: 'memes/meme3.png', chance: 100 }, // 10% chance
                         { src: 'memes/meme4.png', chance: 3 },
                         { src: 'memes/meme5.gif', chance: 70 },
-                        { src: 'memes/meme6.gif', chance: 50 },
+                        { src: 'memes/meme6.gif', chance: 40 },
                 // Add more meme data with chances as needed
             ];
 
@@ -15,7 +15,7 @@
             const selectedMeme = getRandomMeme(memeData);
             
             // Check if the meme should be displayed based on the chance
-            if (Math.random() * 100 <= selectedMeme.chance) {
+            if (Math.random() * 200 <= selectedMeme.chance) {
                 const meme = document.createElement('img');
                 meme.src = selectedMeme.src;
                 meme.classList.add('meme');
