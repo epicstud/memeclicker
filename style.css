@@ -66,3 +66,12 @@ table {
   width: 20%;
 }
 
+#upgradeContainer img {
+    height: 64px;
+    width: 64px;
+}
+#upgradeContainer img:hover {cursor: pointer;} #achievementContainer img:hover{cursor: pointer ! important;}
+#achievementContainer img {
+    height: 64px;
+    width: 64px;
+}
