@@ -1,94 +1,155 @@
-var game = {
-  score: 0,
-  totalScore: 0,
-  totalClicks: 0,
-  clickValue: 1,
-  version: 0.000,
+    /*
 
-  addToScore: function(amount) {
-    this.score += amount;
-    this.totalScore += amount;
-    display.updateScore();
-  },
+    this code is by "tanktot games", its a tutorial of how to make a incremental game, check him out and subscribe to his channel, because he makes this greate tutorial for new people such as myself, he will show how to add buildings, upgrades, achievements, numbers on clicks, etc. you just have to subscribe to his channel, and watch his videos. :D.
 
-  getScorePerSecond: function() {
-    var scorePerSecond = 0;
-    for (i = 0; i < building.name.length; i++)  {
-     scorePerSecond += building.income[i] * building.count[i];
+    */
+
+    var game = {
+    score: 0,
+    totalScore: 0,
+    totalClicks: 0,
+    clickValue: 88,
+    version: 1.000,
+
+    addToScore: function(amount) {
+        this.score += amount;
+        this.totalScore += amount;
+        display.updateScore();
+    },
+
+    getScorePerSecond: function() {
+        var scorePerSecond = 0;
+        for (i = 0; i < building.name.length; i++) {
+            scorePerSecond += building.income[i] * building.count[i];
+        }
+        return scorePerSecond;
     }
-    return scorePerSecond;
-  }
 };
 
 var building = {
-  name: [
-    "Cursor",
-    "Grandma"
+    name: [
+        "Cursor",
+        "Ingredients",
+        "Factory"
+    ],
+    image: [
+        "cursor.png",
+        "ingredients.png",
+        "factory.png"
+    ],
+    count: [0, 0, 0],
+    description: [
+        "Cursors make .5 Per Second, This is the default",
+        "Ingredients make 9 Per Second, This is the default",
+        "factories make 50 Per Second, This is the default"
+    ],
+    income: [
+        .5,
+        9,
+        50
+    ],
+    cost: [
+        25,
+        125,
+        1000
+    ],
 
-  ],
-  image: [
-    "cursor.png",
-    "Grandma.png"
-
-  ],
-  count: [0, 0],
-  income: [
-    1,
-    5
-
-  ],
-  cost:  [
-    15,
-    100
-  ],
-
-  purchase: function(index) {
-    if (game.score >= this.cost[index]) {
-      game.score -= this.cost[index];
-      this.count[index]++;
-      this.cost[index] = Math.ceil(this.cost[index] * 1.10);
-      display.updateScore();
-      display.updateShop();
-            }
-      }
+    purchase: function(index) {
+        if (game.score >= this.cost[index]) {
+            game.score -= this.cost[index];
+            this.count[index]++;
+            this.cost[index] = Math.ceil(this.cost[index] * 1.10);
+            display.updateScore();
+            display.updateShop();
+            display.updateUpgrades();
+        }
+    }
 };
 
 var upgrade = {
     name: [
-        "Bloxy Cola",
-        "Witch Brew"
+        "Better Fingers",
+        "v2 Fingers",
+        "Better Ingredients",
+        "v2 ingredients",
+        "Better Factories",
+        "v2 factories",
+        "Better Clicker",
+        "v2 Clicker"
     ],
     description: [
-        "Your friends stay awake thus giving you more money",
-        "Even if your friends are sleeping, they are creating memes in there dream AKA sleep walking. But instead of sleep walking, they are using there hands."
+        "Cursors are twice as efficient",
+        "Cursors are twice as efficient",
+        "ingredients are twice as efficient",
+        "ingredients are twice as efficient",
+        "factories are twice as efficient",
+        "factories are twice as efficient",
+        "The mouse is twice as efficient",
+        "The mouse is twice as efficient"
     ],
     image: [
-        "images/bloxycola.png",
-        "images/witchbrew.png"
+        "cursor.png",
+        "cursors.png",
+        "ingredients.png",
+        "in.png",
+        "factory.png",
+        "pn.png",
+        "more.png",
+        "hey.png"
     ],
     type: [
         "building",
-        "building"
+        "building",
+        "building",
+        "building",
+        "building",
+        "building",
+        "click",
+        "click"
     ],
     cost: [
         100,
-        250
+        250,
+        500,
+        750,
+        2000,
+        10000,
+        100,
+        1000
     ],
     buildingIndex: [
         0,
-        0
+        0,
+        1,
+        1,
+        2,
+        2,
+        -1,
+        -1
     ],
     requirement: [
-        1,
-        5
+1,
+5,
+1,
+5,
+1,
+5,
+99,
+888
     ],
     bonus: [
-        2,
-        2
+2,
+2,
+2,
+2,
+2,
+2,
+2,
+2
     ],
-    purchased: [false, false],
+    purchased: [false, false, false, false, false,false, false, false],
 
-     purchase: function(index) {
+    purchase: function(index) {
         if (!this.purchased[index] && game.score >= this.cost[index]) {
             if (this.type[index] == "building" && building.count[this.buildingIndex[index]] >= this.requirement[index]) {
                 game.score -= this.cost[index];
@@ -109,6 +170,115 @@ var upgrade = {
     }
 };
 
+var achievement = {
+    name: [
+        "Stone Fingers",
+        "Iron Fingers",
+        "gold Fingers",
+        "Stone Ingredients",
+        "Iron ingredients",
+        "Stone factories",
+        "Iron factories",
+        "fingers",
+        "FInger lick",
+        "Fingers are tired, take a break",
+        "back to work, honey",
+        "What a great start",
+        "You're improving",
+        "great progress",
+        "Are you okay?"
+    ],
+    description: [
+        "Buy 1 cursor",
+        "Buy 10 Cursors",
+        "Buy 25 Cursors",
+        "Buy 1 ingredient",
+        "Buy 10 ingredients",
+        "Buy 1 factory",
+        "Buy 10 factories",
+        "click the salsa 1 time",
+        "Click the salsa 10 times",
+        "Click the salsa 100 times",
+        "Click the salsa 1000 times",
+        "have 1 Salsa",
+        "have 10 salsa",
+        "have 100 Salsa",
+        "have 1000 Salsa"
+    ],
+    image: [
+        "cursor.png",
+        "cursors.png",
+        "ip.png",
+        "i.png",
+        "ji.png",
+        "factory.png",
+        "pn.png",
+        "more.png",
+        "hi.png",
+        "2.png",
+        "poop.png",
+        "example.png",
+        "salsa.png",
+        "moe.png",
+        "mov.png"
+    ],
+    type: [
+        "building",
+        "building",
+        "building",
+        "building",
+        "building",
+        "building",
+        "building",
+        "click",
+        "click",
+        "click",
+        "click",
+        "score",
+        "score",
+        "score",
+        "score"
+    ],
+    requirement: [
+        1,
+        10,
+        25,
+        1,
+        10,
+        1,
+        10,
+        1,
+        10,
+        100,
+        1000,
+        1,
+        10,
+        100,
+        1000
+    ],
+    objectIndex: [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    awarded: [false, false, false,false, false,false, false, false, false, false, false, false, false],
+
+    earn: function (index) {
+        this.awarded[index] = true;
+    }
+};
 
 var display = {
     updateScore: function() {
