@@ -43,7 +43,7 @@
 .clickerContainer img:active {transform: scale(1.03); }*/
 
 #clicker {
-    background-image: url(images/noob.png);
+    background-image: url(noob.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
