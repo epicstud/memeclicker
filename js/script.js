@@ -176,6 +176,12 @@ setInterval(function() {
   display.updateScore();
   }, 1000);
 
+
+document.getElementById("clicker").addEventListener("click", function() {
+  game.totalClicks++;
+  game.addToScore(game.clickValue);
+}, false);
+
 window.onload = function()  {
   loadGame();
   display.updateScore();
