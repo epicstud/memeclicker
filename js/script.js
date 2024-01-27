@@ -49,9 +49,66 @@ var building = {
       this.cost[index] = Math.ceil(this.cost[index] * 1.10);
       display.updateScore();
       display.updateShop();
-  }
-}
+            }
+      }
 };
+
+var upgrade = {
+    name: [
+        "Bloxy Cola",
+        "Witch Brew"
+    ],
+    description: [
+        "Your friends stay awake thus giving you more money",
+        "Even if your friends are sleeping, they are creating memes in there dream AKA sleep walking. But instead of sleep walking, they are using there hands."
+    ],
+    image: [
+        "images/bloxycola.png",
+        "images/witchbrew.png"
+    ],
+    type: [
+        "building",
+        "building"
+    ],
+    cost: [
+        100,
+        250
+    ],
+    buildingIndex: [
+        0,
+        0
+    ],
+    requirement: [
+        1,
+        5
+    ],
+    bonus: [
+        2,
+        2
+    ],
+    purchased: [false, false],
+
+     purchase: function(index) {
+        if (!this.purchased[index] && game.score >= this.cost[index]) {
+            if (this.type[index] == "building" && building.count[this.buildingIndex[index]] >= this.requirement[index]) {
+                game.score -= this.cost[index];
+                building.income[this.buildingIndex[index]] *= this.bonus[index];
+                this.purchased[index] = true;
+
+                display.updateUpgrades();
+                display.updateScore();
+            } else if (this.type[index] == "click" && game.totalClicks >= this.requirement[index]) {
+                game.score -= this.cost[index];
+                game.clickValue *= this.bonus[index];
+                this.purchased[index] = true;
+
+                display.updateUpgrades();
+                display.updateScore();
+            }
+        }
+    }
+};
+
 
 var display = {
   updateScore: function()  {
