@@ -28,30 +28,22 @@
 
 var building = {
     name: [
-        "Cursor",
-        "Ingredients",
-        "Factory"
+        "Friend"
     ],
     image: [
-        "cursor.png",
-        "ingredients.png",
-        "factory.png"
+        "cursor.png" // If you add another one, You must put a comma! but dont put a comma on the last one.
+        
     ],
     count: [0, 0, 0],
     description: [
-        "Cursors make .5 Per Second, This is the default",
-        "Ingredients make 9 Per Second, This is the default",
-        "factories make 50 Per Second, This is the default"
+        "your friends will volunteer to help make memes for you at 3 am. WHAT THE. your friends must be really kind to u."
+        
     ],
     income: [
-        .5,
-        9,
-        50
+        1
     ],
     cost: [
-        25,
-        125,
-        1000
+        25
     ],
 
     purchase: function(index) {
@@ -69,85 +61,44 @@ var building = {
 var upgrade = {
     name: [
         "Better Fingers",
-        "v2 Fingers",
-        "Better Ingredients",
-        "v2 ingredients",
-        "Better Factories",
-        "v2 factories",
-        "Better Clicker",
-        "v2 Clicker"
+        "v2 Fingers"
     ],
     description: [
         "Cursors are twice as efficient",
-        "Cursors are twice as efficient",
-        "ingredients are twice as efficient",
-        "ingredients are twice as efficient",
-        "factories are twice as efficient",
-        "factories are twice as efficient",
-        "The mouse is twice as efficient",
-        "The mouse is twice as efficient"
+        "Cursors are twice as efficient"
     ],
     image: [
         "cursor.png",
-        "cursors.png",
-        "ingredients.png",
-        "in.png",
-        "factory.png",
-        "pn.png",
-        "more.png",
-        "hey.png"
+        "cursors.png"
     ],
     type: [
         "building",
-        "building",
-        "building",
-        "building",
-        "building",
-        "building",
-        "click",
-        "click"
+        "building"
+        
+        //"building",
+        //"building",
+        //"building",
+        //"building",
+        //"click",
+        //"click"
     ],
     cost: [
         100,
-        250,
-        500,
-        750,
-        2000,
-        10000,
-        100,
-        1000
+        250
     ],
     buildingIndex: [
         0,
-        0,
-        1,
-        1,
-        2,
-        2,
-        -1,
-        -1
+        0
     ],
     requirement: [
-1,
-5,
-1,
-5,
-1,
-5,
-99,
-888
+        1,
+        5
     ],
     bonus: [
-2,
-2,
-2,
-2,
-2,
-2,
-2,
-2
+        2,
+        2
     ],
-    purchased: [false, false, false, false, false,false, false, false],
+    purchased: [false, false
 
     purchase: function(index) {
         if (!this.purchased[index] && game.score >= this.cost[index]) {
