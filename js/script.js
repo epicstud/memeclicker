@@ -28,16 +28,10 @@
 
 var building = {
     name: [
-        "friend",
-        "robot",
-        "Find More Land",
-        "establish country"
+        "friend"
     ],
     image: [
-        "cursor.png",
-        "robot.png",
-        "land.png",
-        "country.png"
+        "cursor.png
     ],
     count: [
         0, 
@@ -46,22 +40,13 @@ var building = {
         0
            ],
     description: [
-        "your friends will volunteer to help make memes for you at 3 am. WHAT THE. your friends must be really kind to u.",
-        "a robot arm will help make more memes - 5",
-        "finding a Territory will make 10 Per Second",
-        "Establishing a Meme Country will make you powerful. Next you need a army."
+        "your friends will volunteer to help make memes for you at 3 am. WHAT THE. your friends must be really kind to u."
     ],
     income: [
-        .5,
-        5,
-        10,
-        100
+        .5
     ],
     cost: [
-        15,
-        100,
-        1100,
-        25000
+        15
     ],
 
     purchase: function(index) {
