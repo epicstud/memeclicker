@@ -8,7 +8,7 @@
     score: 0,
     totalScore: 0,
     totalClicks: 0,
-    clickValue: 88,
+    clickValue: 1,
     version: 1.000,
 
     addToScore: function(amount) {
@@ -29,29 +29,39 @@
 var building = {
     name: [
         "friend",
-        "Ingredients",
-        "Factory"
+        "robot",
+        "Find More Land",
+        "establish country"
     ],
     image: [
         "cursor.png",
-        "ingredients.png",
-        "factory.png"
+        "robot.png",
+        "land.png",
+        "country.png"
     ],
-    count: [0, 0, 0],
+    count: [
+        0, 
+        0, 
+        0, 
+        0
+           ],
     description: [
         "your friends will volunteer to help make memes for you at 3 am. WHAT THE. your friends must be really kind to u.",
-        "Ingredients make 9 Per Second, This is the default",
-        "factories make 50 Per Second, This is the default"
+        "a robot arm will help make more memes - 5",
+        "finding a Territory will make 10 Per Second",
+        "Establishing a Meme Country will make you powerful. Next you need a army."
     ],
     income: [
         .5,
-        9,
-        50
+        5,
+        10,
+        100
     ],
     cost: [
-        25,
-        125,
-        1000
+        15,
+        100,
+        1100,
+        25000
     ],
 
     purchase: function(index) {
