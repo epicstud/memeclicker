@@ -68,8 +68,8 @@ var upgrade = {
         "Even if your friends are sleeping, they are creating memes in there dream AKA sleep walking. But instead of sleep walking, they are using there hands."
     ],
     image: [
-        "bloxycola.png",
-        "witchesbrew.png"
+        "images/bloxycola.png",
+        "images/witchesbrew.png"
     ],
     type: [
         "building",
