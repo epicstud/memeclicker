@@ -277,7 +277,7 @@ var display = {
         document.getElementById("score").innerHTML = numberformat.format(game.score);
         document.getElementById("scorepersecond").innerHTML = numberformat.format(game.getScorePerSecond());
         document.getElementById("totals").innerHTML = numberformat.format(game.totalScore);
-        document.title = numberformat.format(game.score) + " Salsa - Salsa Clicker";
+        document.title = numberformat.format(game.score) + " money ";
     },
 
     updateShop: function () {
