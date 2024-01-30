@@ -12,7 +12,7 @@
                 // Add more meme data with chances as needed
             ];
 
-            const cookie = document.getElementById('cookie');
+            const cookie = document.getElementById('noob');
             const cookiePosition = cookie.getBoundingClientRect();
 
             const selectedMeme = getRandomMeme(memeData);
