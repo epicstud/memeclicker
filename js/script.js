@@ -60,86 +60,40 @@ var building = {
 
 var upgrade = {
     name: [
-        "Better Fingers",
-        "v2 Fingers",
-        "Better Ingredients",
-        "v2 ingredients",
-        "Better Factories",
-        "v2 factories",
-        "Better Clicker",
-        "v2 Clicker"
+        "Bloxy Cola",
+        "Witches Brew"
     ],
     description: [
-        "Cursors are twice as efficient",
-        "Cursors are twice as efficient",
-        "ingredients are twice as efficient",
-        "ingredients are twice as efficient",
-        "factories are twice as efficient",
-        "factories are twice as efficient",
-        "The mouse is twice as efficient",
-        "The mouse is twice as efficient"
+        "Your friends stay awake thus giving you more money",
+        "Even if your friends are sleeping, they are creating memes in there dream AKA sleep walking. But instead of sleep walking, they are using there hands."
     ],
     image: [
-        "cursor.png",
-        "cursors.png",
-        "ingredients.png",
-        "in.png",
-        "factory.png",
-        "pn.png",
-        "more.png",
-        "hey.png"
+        "bloxycola.png",
+        "witchesbrew.png"
     ],
     type: [
         "building",
-        "building",
-        "building",
-        "building",
-        "building",
-        "building",
-        "click",
-        "click"
+        "building"
+
+        // TYPES: building: i guess it increases Money Outcome from building WHICH ARE the Freinds and Stuff. Click: I guess it increases the amount of money you get per click.
     ],
     cost: [
         100,
-        250,
-        500,
-        750,
-        2000,
-        10000,
-        100,
-        1000
+        250
     ],
     buildingIndex: [
         0,
-        0,
-        1,
-        1,
-        2,
-        2,
-        -1,
-        -1
+        0
     ],
     requirement: [
-1,
-5,
-1,
-5,
-1,
-5,
-99,
-888
+        1,
+        5
     ],
     bonus: [
-2,
-2,
-2,
-2,
-2,
-2,
-2,
-2
+        2,
+        5
     ],
-    purchased: [false, false, false, false, false,false, false, false],
+    purchased: [false, false],
 
     purchase: function(index) {
         if (!this.purchased[index] && game.score >= this.cost[index]) {
@@ -166,106 +120,35 @@ var achievement = {
     name: [
         "Stone Fingers",
         "Iron Fingers",
-        "gold Fingers",
-        "Stone Ingredients",
-        "Iron ingredients",
-        "Stone factories",
-        "Iron factories",
-        "fingers",
-        "FInger lick",
-        "Fingers are tired, take a break",
-        "back to work, honey",
-        "What a great start",
-        "You're improving",
-        "great progress",
-        "Are you okay?"
+        "gold Fingers"
     ],
     description: [
         "Buy 1 cursor",
         "Buy 10 Cursors",
-        "Buy 25 Cursors",
-        "Buy 1 ingredient",
-        "Buy 10 ingredients",
-        "Buy 1 factory",
-        "Buy 10 factories",
-        "click the salsa 1 time",
-        "Click the salsa 10 times",
-        "Click the salsa 100 times",
-        "Click the salsa 1000 times",
-        "have 1 Salsa",
-        "have 10 salsa",
-        "have 100 Salsa",
-        "have 1000 Salsa"
+        "Buy 25 Cursors"
     ],
     image: [
         "cursor.png",
         "cursors.png",
-        "ip.png",
-        "i.png",
-        "ji.png",
-        "factory.png",
-        "pn.png",
-        "more.png",
-        "hi.png",
-        "2.png",
-        "poop.png",
-        "example.png",
-        "salsa.png",
-        "moe.png",
-        "mov.png"
+        "ip.png"
     ],
     type: [
         "building",
-        "building",
-        "building",
-        "building",
-        "building",
-        "building",
-        "building",
         "click",
-        "click",
-        "click",
-        "click",
-        "score",
-        "score",
-        "score",
         "score"
     ],
     requirement: [
         1,
         10,
-        25,
-        1,
-        10,
-        1,
-        10,
-        1,
-        10,
-        100,
-        1000,
-        1,
-        10,
-        100,
-        1000
+        25
     ],
     objectIndex: [
-        0,
-        0,
-        0,
-        1,
         1,
         2,
-        2,
         -1,
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,
-        -1
+        // 0,
     ],
-    awarded: [false, false, false,false, false,false, false, false, false, false, false, false, false],
+    awarded: [false, false, false],
 
     earn: function (index) {
         this.awarded[index] = true;
