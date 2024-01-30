@@ -1,11 +1,4 @@
- body {
-            margin: 0;
-            overflow: hidden;
-        }
-        .noob {
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-        }
+
         .meme {
             position: absolute;
             width: 70px; /* Adjust the size as needed */
