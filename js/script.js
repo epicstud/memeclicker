@@ -31,7 +31,7 @@ var building = {
         "friend"
     ],
     image: [
-        "cursor.png"
+        "friend.png"
     ],
     count: [
         0
