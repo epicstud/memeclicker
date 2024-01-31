@@ -28,22 +28,28 @@
 
 var building = {
     name: [
-        "friend"
+        "friend",
+        "windows 98"
     ],
     image: [
-        "images/friend.png"
+        "images/friend.png",
+        "images/windows98.png"
     ],
     count: [
+        0,
         0
            ],
     description: [
-        "your friends will volunteer to help make memes for you at 3 am. WHAT THE. your friends must be really kind to u."
+        "your friends will volunteer to help make memes for you at 3 am. WHAT THE. your friends must be really kind to u.",
+        "these pc's are given to your friends. This will help them!"
     ],
     income: [
-        .5
+        .5,
+        5
     ],
     cost: [
-        15
+        15,
+        100
     ],
 
     purchase: function(index) {
