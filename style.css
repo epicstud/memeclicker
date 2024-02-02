@@ -55,6 +55,8 @@ body {
     transition: all .2s ease-in-out;
     height: 256px;
     width: 256px;
+    top: 20px;
+    left: 20px;
 }
 
 #clicker:hover {transform: scale(1.04); cursor: pointer;}
