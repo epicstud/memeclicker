@@ -138,3 +138,40 @@ body {
     height: 64px;
     width: 64px;
 }
+
+ @keyframes wiggle {
+    0% {
+      transform: scale(1);
+    }
+    6.25% {
+      transform: scale(0.75);
+    }
+    8.75% {
+      transform: scale(0.7);
+    }
+    25% {
+      transform: scale(1);
+    }
+    32.5% {
+      transform: scale(0.95);
+    }
+    42.5% {
+      transform: scale(1);
+    }
+    52% {
+      transform: scale(0.97);
+    }
+    62% {
+      transform: scale(1);
+    }
+    72% {
+      transform: scale(0.98);
+    }
+    82% {
+      transform: scale(1);
+    }
+    93% {
+      transform: scale(0.99);
+    }
+  }  
+
