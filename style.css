@@ -57,6 +57,7 @@ body {
     width: 256px;
     top: 30px;
     left: 50px;
+    float: left;
 }
 
 #clicker:hover {transform: scale(1.04); cursor: pointer;}
